@@ -60,6 +60,30 @@ node index.js
 
 The server runs on stdio transport and communicates via standard input/output.
 
+### Testing with MCP Inspector
+
+Use the MCP Inspector to test and debug your server interactively:
+
+```bash
+npx @modelcontextprotocol/inspector node index.js
+```
+
+The MCP Inspector provides a web interface where you can:
+
+- **Browse Resources**: View all available documentation files
+- **Test Tools**: Execute `search_docs` and `get_weather` tools with different parameters
+- **Debug Communication**: See the raw MCP protocol messages
+- **Validate Responses**: Ensure your server responds correctly to different requests
+
+This is especially useful for:
+
+- Testing weather API functionality with different city formats
+- Verifying documentation search results
+- Debugging tool parameter validation
+- Ensuring proper error handling
+
+The inspector will start a local web server (typically on `http://localhost:5173`) where you can interact with your MCP server through a user-friendly interface.
+
 ## MCP Configuration
 
 To use this server with an MCP client (like VS Code with GitHub Copilot), add it to your MCP configuration:
